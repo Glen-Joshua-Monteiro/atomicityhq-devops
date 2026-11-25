@@ -7,6 +7,7 @@ RUN useradd --system --uid 10001 --no-create-home app
 
 WORKDIR /srv
 COPY app/app.py .
+RUN chmod 644 /srv/app.py
 
 USER 10001
 EXPOSE 8080
